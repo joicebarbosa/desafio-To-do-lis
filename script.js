@@ -1,15 +1,16 @@
 const inputBox = document.querySelector(".inputField input");
+const todoBox = document.querySelector(".todoList");
 const addBtn = document.querySelector(".inputField button");
 const todoList = document.querySelector(".todoList");
 const deleteAllBtn = document.querySelector(".footer button");
 
 inputBox.onkeyup = ()=>{
-  let userData = inputBox.value; //obter o valor inserido pelo usuário
-  if(userData.trim() != 0){ //se os valores não são apenas espaços
-        addBtn.classList.add("active"); //ativa o botão adicionar 
-  }else{
-        addBtn.classList.remove("active");// desativa o botão adicionar
-  }
+    let userData = inputBox.value; //obter o valor inserido pelo usuário
+    if(userData.trim() != 0){ //se os valores não são apenas espaços
+          addBtn.classList.add("active"); //ativa o botão adicionar 
+    }else{
+          addBtn.classList.remove("active");// desativa o botão adicionar
+    }
 } 
 
 // se o usuario clicar no botão adicionar 
@@ -40,12 +41,11 @@ function showTasks(){
     if(listArr.length > 0){ //se o comprimento da matriz for maior que 0
       deleteAllBtn.classList.add("active"); //ativa o botão 
     }else{deleteAllBtn.classList.remove("active"); //inativa o botã
-  
-      
+        
     }
     let newLiTag = '';
     listArr.forEach((element, index) => {
-        newLiTag += `<li>${element} <span onclick="deletTask(${index})";><i class="fas fa-trash"></i></span></li>`;
+        newLiTag += `<li> ${element} <span onclick="deleteTask(${index})"; ><i class="fas fa-trash"></i></span></li>`;
     });
     todoList.innerHTML = newLiTag; // Adicionando nova tag li a tag ul
     inputBox.value = ""; // Uma vez que a tarefa é adicionada, deixe o campo de entrada em branco
@@ -53,7 +53,7 @@ function showTasks(){
   }
 
   //exluir tarefa de função
-  function deleteTask(){
+  function deleteTask(index){
     let getLocalStorage = localStorage.getItem("New Todo");
     listArr = JSON.parse(getLocalStorage);
     listArr.splice(index, 1); //delete ou remova o li indexado particular
