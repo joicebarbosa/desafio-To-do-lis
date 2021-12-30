@@ -5,40 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Desafio To-do list</title>
-
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-  <h1>To-do List</h1>
-      <div id="list">
-        <form id="task-form">
-          <input id="task-form" type="text" name="input" placeholder="Digite aqui sua tarefa"/>
-          <button type="submit">Adicionar</button>
-        </form>  
-      </div>            
-      <div id="task"></div>
-      <div>
-    	<form action="">
-                       <ul>
-         	                  <li>
-          	                      <input type="checkbox" >
-         	                      <label>Estudar JavaScript</label>
-         	                  </li>
-          	                  <li>
-         	                      <input type="checkbox" >
-          	                      <label>Estudar HTML</label>
-                           </li>
-                       <li>
-          	                      <input type="checkbox" >
-          	                      <label>Estudar CSS</label>
-          	                  </li>
-                       </ul>
-          	          </form>
-          	      </div>
-          	        
+    <div class="wrapper">
+        <header>Lista de Tafefas</header>
+        <div class="inputField">
+          <input type="text" placeholder="Digite aqui sua tarefa">  
+          <button><i class="fas fa-plus"></i></button>
+        </div>
+        <ul class="todoList">
+          <!--Os dados vem do armazenamento local-->
           
-          
+        </ul>
+  
+        <div class="footer">
+          <span>você tem <span class="pendingNumb"></span> tarefas pendentes</span>
+          <button>Limpar tudo</button> 
+        </div>
+  </div>
          
 </body>
-<script src="script.js"></script>
+      <script src="script.js"></script>
 </html>

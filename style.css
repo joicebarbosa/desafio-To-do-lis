@@ -1,23 +1,134 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
 
-
 * {
   font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid black;
-  border-radius: 5px;
-  background-color: #f8e0f78a;
-   
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(to bottom, #68eacc 0%, #497be8 100%);
 }
 
+.wrapper {
+  margin: 120px auto;
+  max-width: 400px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.wrapper header {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.wrapper.inputField {
+  display: flex;
+  height: 45px;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.inputField input {
+  outline: none;
+  width: 80%;
+  height: 100%;
+  border: 1px solid #ccc;
+  font-size: 17px;
+  border-radius: 3px;
+  padding-left: 15px;
+}
+
+.inputField button {
+  width: 60px;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: #8e49e8;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-left: 5px;
+  padding: 15px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.inputField button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wrapper .todoList {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.todoList li {
+  list-style: none;
+  height: 45px;
+  line-height: 45px;
+  position: relative;
+  background: #f2f2f2;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  padding: 0 15px;
+  cursor: default;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.todoList li span {
+  position: absolute;
+  right: -45px;
+  color: #fff;
+  width: 45px;
+  text-align: center;
+  background: #e74c3c;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todoList li:hover span {
+  right: 0px;
+}
+
+.wrapper .footer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+
+.footer button {
+  border: none;
+  outline: none;
+  background: #8e49e8;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px 10px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.footer button.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
 ul {
- list-style-type: none;
+  list-style-type: none;
 }
 
 input {
@@ -27,7 +138,7 @@ input {
   padding: 0.3rem 0.5rem 0.3rem 0.1rem;
 }
 
-button {
+/*button {
   font-size: 16px;
   color: #40088a96;
   background-color: #F6CED8;
@@ -35,13 +146,12 @@ button {
   border-color: #8A0886;
   padding: 0.3rem;
 
-}
+}*/
 
 #task {
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   margin-top: 20px;
-
 }
 
 :checked + label {
