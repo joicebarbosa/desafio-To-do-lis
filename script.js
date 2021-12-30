@@ -54,15 +54,15 @@ function showTasks(){
 
   //exluir tarefa de função
   function deleteTask(index){
-    let getLocalStorage = localStorage.getItem("New Todo");
-    listArr = JSON.parse(getLocalStorage);
-    listArr.splice(index, 1); //delete ou remova o li indexado particular
-    // depois de remover o li novamente atualize o armazenamento local 
-    localStorage.setItem("New Todo", JSON.stringify(listArr)); // transformando o objeto js em uma string json
-    showTasks(); //chamando a função showTasks
+      let getLocalStorage = localStorage.getItem("New Todo");
+      listArr = JSON.parse(getLocalStorage);
+      listArr.splice(index, 1); //delete ou remova o li indexado particular
+      // depois de remover o li novamente atualize o armazenamento local 
+      localStorage.setItem("New Todo", JSON.stringify(listArr)); // transformando o objeto js em uma string json
+      showTasks(); //chamando a função showTasks
   }
 
-  //apagas todas as funcções da tarafa
+  //apagar todas as funcções da tarafa
    deleteAllBtn.onclick = ()=>{
       listArr = []; //esvaziar um array
       //após excluir todas as tarefas novamente atualize o armazenamento loca

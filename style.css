@@ -1,18 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
-
 *{
   font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body{
   height: 100vh;
   width: 100%;
   background: linear-gradient(to bottom, #68eaccb2 0%, #497be8a9 100%);
 }
-
 .wrapper{
   margin:  120px auto;
   max-width: 500px;
@@ -47,7 +44,7 @@ body{
   color: #fff;
   background-color: #8e49e8;
   border-radius: 5px;
-  padding: 0.3rem;
+  padding: 0.2rem;
   cursor: pointer;
   opacity: 0.6;
   pointer-events: none;
@@ -70,12 +67,21 @@ body{
   opacity: 1;
   pointer-events: auto;
 }
-
 .wrapper .todoList{
   max-height: 250px;
   overflow-y: auto;
 }
-
+.todoList li span{
+  position: absolute;
+  right: -45px;
+  color: #fff;
+  width: 45px;
+  text-align: center;
+  background: #e74c3c;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 .todoList li{
   list-style: none;
   height: 45px;
@@ -89,23 +95,9 @@ body{
   margin-top: 16px;
   overflow: hidden;
 }
-
-.todoList li span{
-  position: absolute;
-  right: -45px;
-  color: #fff;
-  width: 45px;
-  text-align: center;
-  background: #e74c3c;
-  border-radius: 0 3px 3px 0;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
 .todoList li:hover span{
   right: 0px;
 }
-
 .wrapper .footer{
   display: flex;
   width: 100%;
@@ -113,7 +105,6 @@ body{
   margin-top: 25px;
   justify-content: space-between;
 }
-
 .footer button{
   border: none;
   outline: none;
