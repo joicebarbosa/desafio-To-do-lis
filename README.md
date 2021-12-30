@@ -4,4 +4,5 @@ Aplicativo Todo List criado usando HTML CSS e JavaScript.
 
 Nele você pode criar uma lista de tarefas e exlcuir uma a uma ou todas de uma só vez.
 
-![image](https://user-images.githubusercontent.com/88986228/147773071-6b8f45ac-02fd-467d-9b59-a964ac186996.png)
+![image](https://user-images.githubusercontent.com/88986228/147773301-d3f14adc-1d7d-458d-b0ae-cf3c663327d3.png)
+
