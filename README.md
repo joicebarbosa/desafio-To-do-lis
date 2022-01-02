@@ -1,6 +1,8 @@
 # lista-de-tarefas
 
-Aplicativo Todo List criado usando HTML CSS e JavaScript. 
+Aplicativo To-do List criado usando HTML CSS e JavaScript. 
+
+https://joicebarbosa.github.io/lista-de-tarefas/
 
 Nele você pode criar uma lista de tarefas e exlcuir uma a uma ou todas de uma só vez.
 
